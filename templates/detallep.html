@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Producto | Mi Tienda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: #f8fafc;
+        }
+        .detalle-card {
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 16px;
+        }
+        .detalle-header {
+            background: linear-gradient(90deg, #0d6efd 60%, #6610f2 100%);
+            color: white;
+            border-radius: 16px 16px 0 0;
+            padding: 24px 24px 12px 24px;
+        }
+        .detalle-body {
+            padding: 24px;
+        }
+        .btn-back {
+            margin-top: 20px;
+        }
+        .navbar-brand i {
+            margin-right: 8px;
+        }
+        .footer-custom {
+            max-width: 600px;
+            margin: 40px auto 24px auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            background: linear-gradient(90deg, #0d6efd 60%, #6610f2 100%);
+        }
+        .footer-custom small {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="{{ url_for('index') }}">
+          <i class="bi bi-shop"></i> Yayo colmado
+        </a>
+        <span class="navbar-text text-white ms-auto d-none d-lg-block">
+          <i class="bi bi-box-seam"></i> Detalle del Producto
+        </span>
+      </div>
+    </nav>
+    <div class="detalle-card bg-white">
+        <div class="detalle-header text-center">
+            <h2 class="fw-bold mb-2"><i class="bi bi-box-seam"></i> Detalle del Producto</h2>
+            <p class="mb-0 fs-5">Consulta la información de tu producto seleccionado</p>
+        </div>
+        <div class="detalle-body">
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>ID:</strong> <span class="text-primary">{{ producto.id }}</span></li>
+                <li class="list-group-item"><strong>Nombre:</strong> <span class="fw-semibold">{{ producto.nombre }}</span></li>
+                <li class="list-group-item"><strong>Precio:</strong> <span class="badge bg-success fs-6">${{ producto.precio }}</span></li>
+            </ul>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg btn-back">
+                <i class="bi bi-arrow-left"></i> Volver al listado
+            </a>
+        </div>
+    </div>
+    
+<footer
+    class="text-white text-center py-3 shadow-sm"
+    style="
+        max-width: 98vw;
+        margin: 100px auto 24px auto;
+        border-radius: 18px;
+        background: linear-gradient(90deg, #0d6efd 60%, #6610f2 100%);
+    "
+>
+    <small>© 2025 Yayo colmado. Todos los derechos reservados.</small>
+</footer>
+</body>
+</html>
