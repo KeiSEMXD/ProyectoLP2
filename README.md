@@ -28,8 +28,7 @@ Proyecto/
 1. **Clona este repositorio:**
 
    ```sh
-   git clone https://github.com/TU_USUARIO/TU_REPO.git
-   cd TU_REPO
+   git clone https://github.com/KeiSEMXD/ProyectoLP2.git
    ```
 
 2. **Crea un entorno virtual (opcional pero recomendado):**
